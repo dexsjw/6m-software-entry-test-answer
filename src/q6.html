@@ -6,8 +6,16 @@
     <title>Simple Addition Calculator</title>    
     <script type="text/javascript">
         function add(){
-            const num1 = document.querySelector("#num1").value;
-            const num2 = document.querySelector("#num2").value;
+            const num1 = +document.querySelector("#num1").value;
+            const num2 = +document.querySelector("#num2").value;
+            if (num1 === NaN || num2 === NaN) {
+                alert("Number 1 and Number 2 have to be of numeric value.");
+                return;
+            }
+            if (num1 < 0 || num2 < 0) {
+                alert("Number 1 and Number 2 cannot be negative.");
+                return;
+            }
             const answer = num1 + num2;
             document.querySelector("#answer").innerText = answer;
         }
