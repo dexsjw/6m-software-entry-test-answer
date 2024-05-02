@@ -17,5 +17,11 @@ Task 1: Modify this function to use object destructuring for the inputs to displ
 const introduce = () => {
 }
 
+// Not sure if method name should be "introduce()" or "greet()".
+const greet = ({firstName, hobby}) => {
+  console.log(`Hello, my name is ${firstName} and I love ${hobby}!`);
+  alert(`Hello, my name is ${firstName} and I love ${hobby}!`);
+}
+
 greet(person);
 //The output should be "Hello, my name is Jane and I love swimming!"
